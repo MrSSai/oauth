@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+
+oauth:
+  wx:
+    appid: wxeadf53935631ac92
+    appsecret: f01fd7238bec6ae603be799a08d06304
+
+  callback:
+    http: http://java-j2ee.eicp.net/wxcallback
+
+
+# Spring Config
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/oauth?characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=true
+    username: root
+    password: xshdb
+    driver-class-name: com.mysql.jdbc.Driver
+
+# MyBatis 配置
+mybatis:
+  type-aliases-package: com.spring.wxoauth.entity      # Entity 扫描的包名
+  configuration:
+    cache-enabled: true
